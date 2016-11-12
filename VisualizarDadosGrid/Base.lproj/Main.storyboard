@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -41,73 +40,20 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="rZw-4C-YhI"/>
                     <connections>
-                        <segue destination="P9r-3k-CpB" kind="show" identifier="moreDetail" id="GJI-Ip-EC0"/>
+                        <segue destination="ROe-ej-5Cv" kind="show" identifier="moreDetail" id="1NU-ct-fwd"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="amc-Ri-kw5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1622" y="-38"/>
         </scene>
-        <!--Detail Station View Controller-->
-        <scene sceneID="gjk-zn-rdE">
+        <!--Detail-->
+        <scene sceneID="Esz-P4-puf">
             <objects>
-                <viewController id="P9r-3k-CpB" customClass="DetailStationViewController" customModule="VisualizarDadosGrid" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="col-nq-WeG"/>
-                        <viewControllerLayoutGuide type="bottom" id="WJk-hl-xGR"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="f7l-BO-5ch">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="U1t-Ua-Cf0">
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estação:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pos-hU-asd">
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperatura:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVb-MS-Y1x">
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sensação Térmica:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hO-PJ-H2T">
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperatura Máxima Prevista:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Qp-Fj-g3e">
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperatura Mínima Prevista:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCJ-eZ-4Ub">
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="U1t-Ua-Cf0" firstAttribute="leading" secondItem="f7l-BO-5ch" secondAttribute="leadingMargin" id="2dn-dh-ntj"/>
-                            <constraint firstItem="U1t-Ua-Cf0" firstAttribute="top" secondItem="col-nq-WeG" secondAttribute="bottom" constant="25" id="2sf-hQ-aQa"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="U1t-Ua-Cf0" secondAttribute="trailing" id="Ebq-h2-bpu"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="lblEstacao" destination="pos-hU-asd" id="7AD-Tb-HEc"/>
-                        <outlet property="lblSensacaoTermica" destination="8hO-PJ-H2T" id="Gb7-Jw-EtJ"/>
-                        <outlet property="lblTemperatura" destination="dVb-MS-Y1x" id="xsi-rE-cWO"/>
-                        <outlet property="lblTemperaturaMaxima" destination="7Qp-Fj-g3e" id="WiS-jU-u2h"/>
-                        <outlet property="lblTemperaturaMinima" destination="aCJ-eZ-4Ub" id="zud-NY-8NV"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="48F-ZS-sAp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Detail" id="ROe-ej-5Cv" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CGd-cZ-l6c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2540" y="-38"/>
+            <point key="canvasLocation" x="2373" y="-39"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Foi-sb-oiZ">

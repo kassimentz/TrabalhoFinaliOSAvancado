@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -32,73 +31,20 @@
                     <navigationItem key="navigationItem" id="ntV-Jw-sLf"/>
                     <connections>
                         <outlet property="mapView" destination="gbt-Dc-270" id="9yN-ZY-4Ia"/>
-                        <segue destination="N6B-Sl-vMM" kind="show" identifier="moreDetail" id="CIJ-Ti-v36"/>
+                        <segue destination="blL-mQ-xuX" kind="show" identifier="moreDetail" id="FLN-NR-A5R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="138.98050974512745"/>
         </scene>
-        <!--Detail Station View Controller-->
-        <scene sceneID="0pn-Lz-WHu">
+        <!--Detail-->
+        <scene sceneID="blW-rF-tzV">
             <objects>
-                <viewController id="N6B-Sl-vMM" customClass="DetailStationViewController" customModule="VisualizarDadosMapa" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="JkI-4h-bVe"/>
-                        <viewControllerLayoutGuide type="bottom" id="dBB-GE-7R5"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="mJ4-QZ-l7K">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="TDL-Kx-qEV">
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estação:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pVb-cQ-ic9">
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperatura:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jAO-pL-Wse">
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sensação Térmica:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QK2-re-PPf">
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperatura Máxima Prevista:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yW-vq-SUo">
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperatura Mínima Prevista:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2M-nr-Nvl">
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="TDL-Kx-qEV" secondAttribute="trailing" id="Idd-U0-Vr1"/>
-                            <constraint firstItem="TDL-Kx-qEV" firstAttribute="leading" secondItem="mJ4-QZ-l7K" secondAttribute="leadingMargin" id="WhY-XV-wFS"/>
-                            <constraint firstItem="TDL-Kx-qEV" firstAttribute="top" secondItem="JkI-4h-bVe" secondAttribute="bottom" constant="20" id="rET-1W-XG2"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="lblEstacao" destination="pVb-cQ-ic9" id="eYh-Pw-Tfe"/>
-                        <outlet property="lblSensacaoTermica" destination="QK2-re-PPf" id="Qn9-Y5-EHK"/>
-                        <outlet property="lblTemperatura" destination="jAO-pL-Wse" id="GAO-l0-9s9"/>
-                        <outlet property="lblTemperaturaMaxima" destination="2yW-vq-SUo" id="5Vl-Rx-chI"/>
-                        <outlet property="lblTemperaturaMinima" destination="F2M-nr-Nvl" id="31i-8l-nMe"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wcP-6I-v6f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Detail" id="blL-mQ-xuX" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vON-zO-7Lx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2020" y="139"/>
+            <point key="canvasLocation" x="1940" y="142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vXf-37-HAo">
