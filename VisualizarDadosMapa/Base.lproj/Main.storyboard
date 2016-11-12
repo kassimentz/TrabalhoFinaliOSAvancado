@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6lz-DZ-fz0">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="VisualizarDadosMapa" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gbt-Dc-270"/>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gbt-Dc-270" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1wi-Q6-aF0"/>
+                            <constraint firstAttribute="trailing" secondItem="gbt-Dc-270" secondAttribute="trailing" id="IhK-V7-cW7"/>
+                            <constraint firstItem="gbt-Dc-270" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="QpM-dI-LTg"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gbt-Dc-270" secondAttribute="bottom" id="g1N-hr-fii"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ntV-Jw-sLf"/>
+                    <connections>
+                        <outlet property="mapView" destination="gbt-Dc-270" id="9yN-ZY-4Ia"/>
+                        <segue destination="N6B-Sl-vMM" kind="show" identifier="moreDetail" id="CIJ-Ti-v36"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="138.98050974512745"/>
+        </scene>
+        <!--Detail Station View Controller-->
+        <scene sceneID="0pn-Lz-WHu">
+            <objects>
+                <viewController id="N6B-Sl-vMM" customClass="DetailStationViewController" customModule="VisualizarDadosMapa" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JkI-4h-bVe"/>
+                        <viewControllerLayoutGuide type="bottom" id="dBB-GE-7R5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mJ4-QZ-l7K">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="TDL-Kx-qEV">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estação:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pVb-cQ-ic9">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperatura:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jAO-pL-Wse">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sensação Térmica:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QK2-re-PPf">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperatura Máxima Prevista:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yW-vq-SUo">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperatura Mínima Prevista:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2M-nr-Nvl">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="TDL-Kx-qEV" secondAttribute="trailing" id="Idd-U0-Vr1"/>
+                            <constraint firstItem="TDL-Kx-qEV" firstAttribute="leading" secondItem="mJ4-QZ-l7K" secondAttribute="leadingMargin" id="WhY-XV-wFS"/>
+                            <constraint firstItem="TDL-Kx-qEV" firstAttribute="top" secondItem="JkI-4h-bVe" secondAttribute="bottom" constant="20" id="rET-1W-XG2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblEstacao" destination="pVb-cQ-ic9" id="eYh-Pw-Tfe"/>
+                        <outlet property="lblSensacaoTermica" destination="QK2-re-PPf" id="Qn9-Y5-EHK"/>
+                        <outlet property="lblTemperatura" destination="jAO-pL-Wse" id="GAO-l0-9s9"/>
+                        <outlet property="lblTemperaturaMaxima" destination="2yW-vq-SUo" id="5Vl-Rx-chI"/>
+                        <outlet property="lblTemperaturaMinima" destination="F2M-nr-Nvl" id="31i-8l-nMe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wcP-6I-v6f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2020" y="139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vXf-37-HAo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6lz-DZ-fz0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XAc-mn-2sc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="tbc-f0-7n7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SwR-9R-ve3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="792.95352323838085"/>
+        </scene>
+    </scenes>
+</document>

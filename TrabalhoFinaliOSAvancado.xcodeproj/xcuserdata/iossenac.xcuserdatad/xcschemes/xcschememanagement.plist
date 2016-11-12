@@ -9,10 +9,30 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>VisualizarDadosGrid.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>VisualizarDadosMapa.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>C207EA0D1DD766140093F032</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C207EA261DD766EE0093F032</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C207EA3C1DD767270093F032</key>
 		<dict>
 			<key>primary</key>
 			<true/>
